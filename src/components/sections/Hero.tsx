@@ -12,7 +12,7 @@ interface HeroProps {
 
 export default function Hero({ title, subtitle, primaryCta, secondaryCta, bookingUrl }: HeroProps) {
     return (
-        <section className="relative overflow-hidden bg-white pt-12 pb-24 lg:pt-24 lg:pb-32">
+        <section className="relative overflow-hidden bg-white pt-3 pb-24 lg:pt-6 lg:pb-32">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="flex flex-col lg:flex-row items-center gap-16">
 
