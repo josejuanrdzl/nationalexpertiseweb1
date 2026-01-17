@@ -12,8 +12,8 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                     <h1 className="text-4xl md:text-6xl font-bold mb-6">{content.title}</h1>
                     <p className="text-xl text-[var(--secondary)]">{content.desc}</p>
                     <div className="mt-12 space-y-4">
-                        <p>Houston, Texas</p>
-                        <p>support@ne.com</p>
+                        <p>{content.address}</p>
+                        <p>{content.email}</p>
                     </div>
                 </div>
 

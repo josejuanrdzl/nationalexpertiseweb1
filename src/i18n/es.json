@@ -128,6 +128,8 @@
     "contact": {
         "title": "Contáctanos",
         "desc": "¿Listo para optimizar tu operación SAP/Oracle?",
+        "address": "Monterrey, Nuevo León, México",
+        "email": "ventas@national.expert",
         "form": {
             "name": "Nombre",
             "email": "Correo",
