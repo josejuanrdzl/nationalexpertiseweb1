@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  /* New Corporate Identity - Red & Blue */
+  --background: #ffffff;
+  --surface: #f8f9fa;
+  --foreground: #1e1e1e;
+
+  --primary: #D9002C;
+  /* The Red from the logo */
+  --primary-dark: #b00023;
+  --primary-light: #ffebef;
+
+  --secondary: #00639D;
+  /* The Blue from the text */
+  --border: #e2e8f0;
+
+  --header-height: 96px;
+  /* Taller header for the new layout */
+}
+
+/* Base Styles */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Utility to hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

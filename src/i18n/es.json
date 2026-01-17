@@ -1,0 +1,138 @@
+{
+    "common": {
+        "bookCall": "Agendar Llamada",
+        "activateAMS": "Activar Soporte AMS",
+        "toggleLanguage": "EN"
+    },
+    "nav": {
+        "services": "Servicios",
+        "solutions": "Soluciones",
+        "caseStudies": "Casos de Éxito",
+        "resources": "Recursos",
+        "access": "Acceso",
+        "careers": "Carreras",
+        "about": "Nosotros",
+        "contact": "Contacto"
+    },
+    "pages": {
+        "access": {
+            "title": "Acceso Interno",
+            "subtitle": "Portales para Consultores y Clientes de NE."
+        },
+        "services": {
+            "title": "Nuestra Experiencia",
+            "subtitle": "Modelos de entrega SAP y Oracle integrales, construidos para estabilidad, velocidad y resultados medibles."
+        },
+        "solutions": {
+            "title": "Soluciones para Clientes",
+            "subtitle": "Herramientas innovadoras para optimizar tu entorno SAP y Oracle. Próximamente."
+        },
+        "caseStudies": {
+            "title": "Casos de Éxito",
+            "subtitle": "Resultados probados ayudando a empresas de Norteamérica a estabilizar y escalar sus operaciones SAP y Oracle."
+        },
+        "resources": {
+            "title": "Centro de Conocimiento",
+            "subtitle": "Insights de expertos, guías y descargables para ayudarte a navegar tu transformación digital."
+        }
+    },
+    "home": {
+        "hero": {
+            "title": "Expertos SAP & Oracle Nearshore y Bilingües para Norteamérica",
+            "subtitle": "Ayudamos a empresas en USA y México a estabilizar su operación, ejecutar proyectos y reducir costos de soporte con AMS, Staffing Nearshore y Consultoría SAP/Oracle. HQ en Houston, Texas."
+        },
+        "trust": "Empresas en México y Norteamérica confían en NE",
+        "why": {
+            "title": "Por qué NE National Expertise",
+            "items": [
+                "Entrega bilingüe (EN/ES) con comunicación ejecutiva",
+                "Respuesta alineada a CST para coordinación rápida",
+                "Nearshore con ventaja de costo y experiencia senior",
+                "Experiencia SAP + Oracle en procesos críticos",
+                "Delivery remoto + capacidad on-site en USA y México",
+                "Ejecución end-to-end: diagnóstico → entrega → estabilización"
+            ]
+        },
+        "cta_band": {
+            "title": "¿Listo para mejorar tu operación SAP en Norteamérica?",
+            "primary": "Agendar Llamada",
+            "secondary": "Ver AMS Support"
+        }
+    },
+    "services": {
+        "ams": {
+            "title": "Soporte AMS para SAP & Oracle",
+            "desc": "Soporte por tickets nearshore para una operación estable, rápida y predecible.",
+            "options": {
+                "ticket": "Ticket Resuelto — Paga solo tickets resueltos",
+                "bag": "Bolsa de Horas — Prepago con mejor tarifa"
+            }
+        },
+        "staffing": {
+            "title": "Staffing SAP Nearshore desde LATAM",
+            "desc": "Consultores senior bilingües en horario CST para acelerar proyectos.",
+            "roles": [
+                "FI/CO",
+                "MM",
+                "SD",
+                "PP",
+                "QM",
+                "BW",
+                "ABAP",
+                "Basis",
+                "Oracle ERP"
+            ],
+            "cta": "Solicitar Perfiles"
+        },
+        "projects": {
+            "title": "Proyectos SAP & Oracle",
+            "desc": "Implementación, mejoras, rollouts y estabilización con resultados medibles.",
+            "cta": "Solicitar Propuesta"
+        },
+        "migration": {
+            "title": "Migración ECC a S/4HANA",
+            "desc": "Reduce riesgos con un enfoque estructurado: assessment, pruebas, cutover y soporte post go-live.",
+            "approach": [
+                "Diagnóstico",
+                "Preparación",
+                "Planeación",
+                "Datos",
+                "Pruebas",
+                "Cutover",
+                "Hypercare",
+                "Estabilización",
+                "Mejora Continua"
+            ],
+            "cta": "Assessment de Migración"
+        },
+        "localization": {
+            "title": "Localización SAP México y LATAM",
+            "desc": "Cumplimiento para facturación electrónica, DIOT, contabilidad electrónica, impuestos y Carta Porte.",
+            "cta": "Revisión de Cumplimiento"
+        }
+    },
+    "about": {
+        "title": "Sobre NE National Expertise",
+        "story": "Somos un equipo bilingüe alineado al horario CST, ofreciendo delivery nearshore desde México con presencia comercial en USA.",
+        "stats": [
+            {
+                "label": "HQ",
+                "value": "Houston, TX"
+            },
+            {
+                "label": "Centro de Delivery",
+                "value": "México"
+            }
+        ]
+    },
+    "contact": {
+        "title": "Contáctanos",
+        "desc": "¿Listo para optimizar tu operación SAP/Oracle?",
+        "form": {
+            "name": "Nombre",
+            "email": "Correo",
+            "message": "Mensaje",
+            "submit": "Enviar Mensaje"
+        }
+    }
+}
