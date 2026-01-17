@@ -1,6 +1,7 @@
 import { getDictionary, Locale } from "@/i18n/config";
 import Section from "@/components/ui/Section";
 import { User, Check } from "lucide-react";
+import Link from "next/link";
 
 export default async function StaffingPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -30,9 +31,9 @@ export default async function StaffingPage({ params }: { params: Promise<{ lang:
                     </div>
 
                     <div className="mt-12 text-center">
-                        <button className="bg-[var(--primary)] text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--primary-dark)] transition-colors">
+                        <Link href={`/${lang}/contact?subject=Nearshore Staffing Request`} className="inline-block bg-[var(--primary)] text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--primary-dark)] transition-colors">
                             {content.cta}
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </Section>

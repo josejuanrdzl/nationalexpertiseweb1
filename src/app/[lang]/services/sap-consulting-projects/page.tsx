@@ -1,5 +1,6 @@
 import { getDictionary, Locale } from "@/i18n/config";
 import Section from "@/components/ui/Section";
+import Link from "next/link";
 
 export default async function ProjectsPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -13,9 +14,9 @@ export default async function ProjectsPage({ params }: { params: Promise<{ lang:
                     <span className="text-[var(--primary)] font-bold uppercase tracking-widest text-sm mb-4 block">Service</span>
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">{content.title}</h1>
                     <p className="text-xl text-[var(--secondary)]">{content.desc}</p>
-                    <button className="mt-8 bg-[var(--primary)] text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--primary-dark)] transition-colors">
+                    <Link href={`/${lang}/contact?subject=SAP Consulting Projects Request`} className="inline-block mt-8 bg-[var(--primary)] text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--primary-dark)] transition-colors">
                         {content.cta}
-                    </button>
+                    </Link>
                 </div>
             </section>
         </main>

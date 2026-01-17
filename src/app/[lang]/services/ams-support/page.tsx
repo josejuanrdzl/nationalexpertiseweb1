@@ -1,6 +1,7 @@
 import { getDictionary, Locale } from "@/i18n/config";
 import Section from "@/components/ui/Section";
 import { Check, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default async function AMSSupportPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -29,9 +30,9 @@ export default async function AMSSupportPage({ params }: { params: Promise<{ lan
                             <li className="flex gap-3"><Check className="text-[var(--primary)] w-5 h-5" /> <span>Pay per resolution</span></li>
                             <li className="flex gap-3"><Check className="text-[var(--primary)] w-5 h-5" /> <span>No monthly minimum</span></li>
                         </ul>
-                        <button className="w-full py-3 rounded-lg border border-[var(--border)] font-semibold hover:bg-[var(--surface)] transition-colors">
+                        <Link href={`/${lang}/contact?subject=Ticket-Solved`} className="block w-full text-center py-3 rounded-lg border border-[var(--border)] font-semibold hover:bg-[var(--surface)] transition-colors">
                             Select Option
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Option 2 */}
@@ -43,9 +44,9 @@ export default async function AMSSupportPage({ params }: { params: Promise<{ lan
                             <li className="flex gap-3"><Check className="text-[var(--primary)] w-5 h-5" /> <span>Discounted hourly rate</span></li>
                             <li className="flex gap-3"><Check className="text-[var(--primary)] w-5 h-5" /> <span>Rollover hours</span></li>
                         </ul>
-                        <button className="w-full py-3 rounded-lg bg-[var(--primary)] text-white font-semibold hover:bg-[var(--primary-dark)] transition-colors">
+                        <Link href={`/${lang}/contact?subject=Time-Bag`} className="block w-full text-center py-3 rounded-lg bg-[var(--primary)] text-white font-semibold hover:bg-[var(--primary-dark)] transition-colors">
                             Select Option
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </Section>

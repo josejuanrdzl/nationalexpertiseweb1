@@ -2,6 +2,7 @@ import { getDictionary, Locale } from "@/i18n/config";
 import ServiceCard from "@/components/ui/ServiceCard";
 import Section from "@/components/ui/Section";
 import Hero from "@/components/sections/Hero";
+import { CheckCircle2, Headset, Users, Rocket, Database, Globe } from "lucide-react";
 
 export default async function ServicesPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -26,26 +27,31 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                         title={dict.services.ams.title}
                         description={dict.services.ams.desc}
                         href={`/${lang}/services/ams-support`}
+                        icon={<Headset className="w-6 h-6" />}
                     />
                     <ServiceCard
                         title={dict.services.staffing.title}
                         description={dict.services.staffing.desc}
                         href={`/${lang}/services/nearshore-staffing`}
+                        icon={<Users className="w-6 h-6" />}
                     />
                     <ServiceCard
                         title={dict.services.projects.title}
                         description={dict.services.projects.desc}
                         href={`/${lang}/services/sap-consulting-projects`}
+                        icon={<Rocket className="w-6 h-6" />}
                     />
                     <ServiceCard
                         title={dict.services.migration.title}
                         description={dict.services.migration.desc}
                         href={`/${lang}/services/s4hana-migration`}
+                        icon={<Database className="w-6 h-6" />}
                     />
                     <ServiceCard
                         title={dict.services.localization.title}
                         description={dict.services.localization.desc}
                         href={`/${lang}/services/mexico-localization`}
+                        icon={<Globe className="w-6 h-6" />}
                     />
                 </div>
             </Section>

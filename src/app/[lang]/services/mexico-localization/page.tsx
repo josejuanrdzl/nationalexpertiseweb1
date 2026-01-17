@@ -1,6 +1,7 @@
 import { getDictionary, Locale } from "@/i18n/config";
 import Section from "@/components/ui/Section";
 import { FileCheck } from "lucide-react";
+import Link from "next/link";
 
 export default async function LocalizationPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -22,9 +23,9 @@ export default async function LocalizationPage({ params }: { params: Promise<{ l
                     <FileCheck className="w-16 h-16 text-[var(--primary)] mx-auto mb-6" />
                     <h3 className="text-2xl font-bold mb-4">Compliance Check</h3>
                     <p className="text-[var(--secondary)] mb-8">Ensure your SAP system meets all SAT (Mexico) requirements including CFDI 4.0 and Carta Porte.</p>
-                    <button className="bg-[var(--primary)] text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--primary-dark)] transition-colors">
+                    <Link href={`/${lang}/contact?subject=Localization Compliance Review`} className="inline-block bg-[var(--primary)] text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--primary-dark)] transition-colors">
                         {content.cta}
-                    </button>
+                    </Link>
                 </div>
             </Section>
         </main>

@@ -1,6 +1,7 @@
 import { getDictionary, Locale } from "@/i18n/config";
 import Section from "@/components/ui/Section";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default async function MigrationPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -33,9 +34,9 @@ export default async function MigrationPage({ params }: { params: Promise<{ lang
                     ))}
                 </div>
                 <div className="mt-12 text-center">
-                    <button className="bg-[var(--primary)] text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--primary-dark)] transition-colors">
+                    <Link href={`/${lang}/contact?subject=S/4HANA Migration Assessment`} className="inline-block bg-[var(--primary)] text-white px-8 py-3 rounded-full font-bold hover:bg-[var(--primary-dark)] transition-colors">
                         {content.cta}
-                    </button>
+                    </Link>
                 </div>
             </Section>
         </main>
