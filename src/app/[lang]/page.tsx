@@ -3,7 +3,7 @@ import Hero from "@/components/sections/Hero";
 import TrustBar from "@/components/sections/TrustBar";
 import ServiceCard from "@/components/ui/ServiceCard";
 import Section from "@/components/ui/Section";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, Headset, Users, Rocket, Database } from "lucide-react";
 
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -35,21 +35,25 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
                         title={dict.services.ams.title}
                         description={dict.services.ams.desc}
                         href={`/${lang}/services/ams-support`}
+                        icon={<Headset className="w-6 h-6" />}
                     />
                     <ServiceCard
                         title={dict.services.staffing.title}
                         description={dict.services.staffing.desc}
                         href={`/${lang}/services/nearshore-staffing`}
+                        icon={<Users className="w-6 h-6" />}
                     />
                     <ServiceCard
                         title={dict.services.projects.title}
                         description={dict.services.projects.desc}
                         href={`/${lang}/services/sap-consulting-projects`}
+                        icon={<Rocket className="w-6 h-6" />}
                     />
                     <ServiceCard
                         title={dict.services.migration.title}
                         description={dict.services.migration.desc}
                         href={`/${lang}/services/s4hana-migration`}
+                        icon={<Database className="w-6 h-6" />}
                     />
                 </div>
             </Section>
