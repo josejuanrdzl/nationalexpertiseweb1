@@ -1,8 +1,9 @@
 import { getDictionary, Locale } from "@/i18n/config";
 import Section from "@/components/ui/Section";
 
-export default async function AboutPage({ params }: { params: { lang: Locale } }) {
-    const dict = await getDictionary(params.lang);
+export default async function AboutPage({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
     const content = dict.about;
 
     return (

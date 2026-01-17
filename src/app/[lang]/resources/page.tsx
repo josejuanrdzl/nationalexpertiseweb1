@@ -2,8 +2,9 @@ import { getDictionary, Locale } from "@/i18n/config";
 import Section from "@/components/ui/Section";
 import { FileText, Download } from "lucide-react";
 
-export default async function ResourcesPage({ params }: { params: { lang: Locale } }) {
-    const dict = await getDictionary(params.lang);
+export default async function ResourcesPage({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
 
     const resources = [
         { title: "NE Services Overview", type: "PDF" },

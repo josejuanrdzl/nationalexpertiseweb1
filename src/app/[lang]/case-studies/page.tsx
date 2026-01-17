@@ -3,8 +3,9 @@ import Section from "@/components/ui/Section";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { TrendingUp, Globe, ShoppingCart } from "lucide-react";
 
-export default async function CaseStudiesPage({ params }: { params: { lang: Locale } }) {
-    const dict = await getDictionary(params.lang);
+export default async function CaseStudiesPage({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
 
     // Mock data for display
     const cases = [

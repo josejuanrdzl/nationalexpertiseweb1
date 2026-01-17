@@ -21,16 +21,17 @@ export default async function RootLayout({
     params,
 }: Readonly<{
     children: React.ReactNode;
-    params: { lang: Locale };
+    params: Promise<{ lang: string }>;
 }>) {
-    const dict = await getDictionary(params.lang);
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
 
     return (
-        <html lang={params.lang}>
+        <html lang={lang}>
             <body className={inter.className}>
-                <Header lang={params.lang} dict={dict} />
+                <Header lang={lang as Locale} dict={dict} />
                 {children}
-                <Footer lang={params.lang} dict={dict} />
+                <Footer lang={lang as Locale} dict={dict} />
             </body>
         </html>
     );

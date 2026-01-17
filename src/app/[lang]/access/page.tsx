@@ -3,8 +3,9 @@ import Section from "@/components/ui/Section";
 import ServiceCard from "@/components/ui/ServiceCard";
 import { BrainCircuit, Ticket } from "lucide-react";
 
-export default async function AccessPage({ params }: { params: { lang: Locale } }) {
-    const dict = await getDictionary(params.lang);
+export default async function AccessPage({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
 
     return (
         <main className="min-h-screen flex flex-col">

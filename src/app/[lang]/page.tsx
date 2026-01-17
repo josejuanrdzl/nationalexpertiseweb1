@@ -5,8 +5,9 @@ import ServiceCard from "@/components/ui/ServiceCard";
 import Section from "@/components/ui/Section";
 import { CheckCircle2 } from "lucide-react";
 
-export default async function Home({ params }: { params: { lang: Locale } }) {
-    const dict = await getDictionary(params.lang);
+export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
 
     return (
         <main className="min-h-screen flex flex-col overflow-hidden">
@@ -33,22 +34,22 @@ export default async function Home({ params }: { params: { lang: Locale } }) {
                     <ServiceCard
                         title={dict.services.ams.title}
                         description={dict.services.ams.desc}
-                        href={`/${params.lang}/services/ams-support`}
+                        href={`/${lang}/services/ams-support`}
                     />
                     <ServiceCard
                         title={dict.services.staffing.title}
                         description={dict.services.staffing.desc}
-                        href={`/${params.lang}/services/nearshore-staffing`}
+                        href={`/${lang}/services/nearshore-staffing`}
                     />
                     <ServiceCard
                         title={dict.services.projects.title}
                         description={dict.services.projects.desc}
-                        href={`/${params.lang}/services/sap-consulting-projects`}
+                        href={`/${lang}/services/sap-consulting-projects`}
                     />
                     <ServiceCard
                         title={dict.services.migration.title}
                         description={dict.services.migration.desc}
-                        href={`/${params.lang}/services/s4hana-migration`}
+                        href={`/${lang}/services/s4hana-migration`}
                     />
                 </div>
             </Section>

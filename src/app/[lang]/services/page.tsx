@@ -3,8 +3,9 @@ import ServiceCard from "@/components/ui/ServiceCard";
 import Section from "@/components/ui/Section";
 import Hero from "@/components/sections/Hero";
 
-export default async function ServicesPage({ params }: { params: { lang: Locale } }) {
-    const dict = await getDictionary(params.lang);
+export default async function ServicesPage({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
 
     return (
         <main className="min-h-screen flex flex-col">
@@ -24,27 +25,27 @@ export default async function ServicesPage({ params }: { params: { lang: Locale 
                     <ServiceCard
                         title={dict.services.ams.title}
                         description={dict.services.ams.desc}
-                        href={`/${params.lang}/services/ams-support`}
+                        href={`/${lang}/services/ams-support`}
                     />
                     <ServiceCard
                         title={dict.services.staffing.title}
                         description={dict.services.staffing.desc}
-                        href={`/${params.lang}/services/nearshore-staffing`}
+                        href={`/${lang}/services/nearshore-staffing`}
                     />
                     <ServiceCard
                         title={dict.services.projects.title}
                         description={dict.services.projects.desc}
-                        href={`/${params.lang}/services/sap-consulting-projects`}
+                        href={`/${lang}/services/sap-consulting-projects`}
                     />
                     <ServiceCard
                         title={dict.services.migration.title}
                         description={dict.services.migration.desc}
-                        href={`/${params.lang}/services/s4hana-migration`}
+                        href={`/${lang}/services/s4hana-migration`}
                     />
                     <ServiceCard
                         title={dict.services.localization.title}
                         description={dict.services.localization.desc}
-                        href={`/${params.lang}/services/mexico-localization`}
+                        href={`/${lang}/services/mexico-localization`}
                     />
                 </div>
             </Section>

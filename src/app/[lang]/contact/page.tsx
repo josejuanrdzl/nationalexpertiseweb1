@@ -1,7 +1,8 @@
 import { getDictionary, Locale } from "@/i18n/config";
 
-export default async function ContactPage({ params }: { params: { lang: Locale } }) {
-    const dict = await getDictionary(params.lang);
+export default async function ContactPage({ params }: { params: Promise<{ lang: string }> }) {
+    const { lang } = await params;
+    const dict = await getDictionary(lang);
     const content = dict.contact;
 
     return (
