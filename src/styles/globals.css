@@ -19,6 +19,14 @@
   /* Taller header for the new layout */
 }
 
+.dark {
+  --background: #020617;
+  --surface: #1e293b;
+  --foreground: #f8f9fa;
+  --border: #334155;
+  --primary-light: #3f1018;
+}
+
 /* Base Styles */
 body {
   background-color: var(--background);

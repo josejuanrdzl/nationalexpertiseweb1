@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Locale } from "@/i18n/config";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 type HeaderProps = {
     lang: Locale;
@@ -61,6 +62,7 @@ export default function Header({ lang, dict }: HeaderProps) {
                     <Link href={newPath} className="text-sm font-bold uppercase text-gray-400 hover:text-[var(--primary)] transition-colors ml-4 border-l pl-4 border-gray-200">
                         {dict.common.toggleLanguage}
                     </Link>
+                    <ThemeToggle />
                 </nav>
 
                 {/* Mobile Toggle */}
@@ -78,7 +80,10 @@ export default function Header({ lang, dict }: HeaderProps) {
                     <Link href={`/${lang}/resources`} className="block text-lg font-medium text-gray-800" onClick={() => setIsOpen(false)}>{dict.nav.resources}</Link>
                     <Link href={`/${lang}/about`} className="block text-lg font-medium text-gray-800" onClick={() => setIsOpen(false)}>{dict.nav.about}</Link>
                     <hr className="border-gray-100" />
-                    <Link href={newPath} className="block py-2 font-bold uppercase text-[var(--primary)]">{dict.common.toggleLanguage}</Link>
+                    <div className="flex items-center justify-between">
+                        <Link href={newPath} className="block py-2 font-bold uppercase text-[var(--primary)]">{dict.common.toggleLanguage}</Link>
+                        <ThemeToggle />
+                    </div>
                 </div>
             )}
         </header>

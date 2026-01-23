@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 import { i18n, type Locale, getDictionary } from "@/i18n/config";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,9 +30,11 @@ export default async function RootLayout({
     return (
         <html lang={lang}>
             <body className={inter.className}>
-                <Header lang={lang as Locale} dict={dict} />
-                {children}
-                <Footer lang={lang as Locale} dict={dict} />
+                <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+                    <Header lang={lang as Locale} dict={dict} />
+                    {children}
+                    <Footer lang={lang as Locale} dict={dict} />
+                </ThemeProvider>
             </body>
         </html>
     );
